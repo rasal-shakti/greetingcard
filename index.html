@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Card Designer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="input-container">
+            <h1>Design Your Card</h1>
+            
+            <label for="title"><h3>Card Title</h3></label>
+            <input type="text" id="title" placeholder="Enter card title">
+            <div class="posi">
+                <input type="number" id="titleX" placeholder="X" >
+                <input type="number" id="titleY" placeholder="Y" >
+            </div>
+            
+            <label for="message"><h3>Your Message</h3></label>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+
+            <div class="posi">
+                <input type="number" id="messageX" placeholder="X" >
+                <input type="number" id="messageY" placeholder="Y" >
+            </div>
+            
+            <label for="recipient"><h3>To (Recipient)</h3></label>
+            <input type="text" id="recipient" placeholder="Recipient's name">
+            
+            <button id="saveButton" class="upload-btn">Save Card</button>
+        </div>
+
+        <div class="preview-container">
+            <div class="card-preview">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB5bCBTlFwjvMMRIuxzi__9oD0ncH5UfNGBA&s" alt="Card background" class="preview-image" id="cardImage">
+                <div id="previewTitle" class="card-title"></div>
+                <div id="previewMessage" class="card-message"></div>
+                <div id="previewTo" class="card-to">To:</div>
+            </div>
+
+            <div class="image-controls">
+                <label for="imageInput" class="upload-btn">Upload Image</label>
+                <input type="file" id="imageInput" accept="image/*"> 
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
